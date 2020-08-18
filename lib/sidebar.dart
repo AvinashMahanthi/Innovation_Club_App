@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:innovationclubdemo/About_Us.dart';
+import 'package:innovationclubdemo/Form_page.dart';
+import 'package:innovationclubdemo/passedoutpage.dart';
 
 class SideBar extends StatelessWidget {
   @override
@@ -70,7 +72,36 @@ class SideBar extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.input),
-            title: Text('Welcome'),
+            title: Text('Home'),
+            onTap: () => {Navigator.of(context).pop()},
+          ),
+          ListTile(
+            leading: Icon(Icons.verified_user),
+            title: Text('Our passesd out students'),
+            onTap: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => PassedOutBatch(),
+                ),
+              )
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.border_color),
+            title: Text('Join Us'),
+            onTap: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => FormPage(),
+                ),
+              )
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.exit_to_app),
+            title: Text('About us'),
             onTap: () => {
               Navigator.push(
                 context,
@@ -81,23 +112,8 @@ class SideBar extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.verified_user),
-            title: Text('Profile'),
-            onTap: () => {Navigator.of(context).pop()},
-          ),
-          ListTile(
             leading: Icon(Icons.settings),
             title: Text('Settings'),
-            onTap: () => {Navigator.of(context).pop()},
-          ),
-          ListTile(
-            leading: Icon(Icons.border_color),
-            title: Text('Feedback'),
-            onTap: () => {Navigator.of(context).pop()},
-          ),
-          ListTile(
-            leading: Icon(Icons.exit_to_app),
-            title: Text('About us'),
             onTap: () => {Navigator.of(context).pop()},
           ),
         ],

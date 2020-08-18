@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:innovationclubdemo/description.dart';
 
 class AboutScreen extends StatefulWidget {
   @override
@@ -24,7 +25,7 @@ class _AboutScreenState extends State<AboutScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[100],
-      body: Column(
+      body: ListView(
         children: <Widget>[
           Image(
             image: AssetImage("assets/innovation.png"),
@@ -38,7 +39,7 @@ class _AboutScreenState extends State<AboutScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  "Fusion of thoughts leading to innovation in engineering.",
+                  "$goal",
                   style: TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.w600,
@@ -46,7 +47,7 @@ class _AboutScreenState extends State<AboutScreen> {
                 ),
                 SizedBox(height: 10.0),
                 Text(
-                  "Developers",
+                  "Our Developers",
                   style: TextStyle(
                     fontSize: 30.0,
                     fontWeight: FontWeight.w600,
@@ -129,6 +130,34 @@ class _AboutScreenState extends State<AboutScreen> {
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage("assets/witch.jpg"),
+                          fit: BoxFit.cover,
+                        ),
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10.0),
+                Row(
+                  children: <Widget>[
+                    Container(
+                      height: 175.0,
+                      width: 175.0,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/spyderman.jpg"),
+                          fit: BoxFit.cover,
+                        ),
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                    ),
+                    SizedBox(width: 20.0),
+                    Container(
+                      height: 175.0,
+                      width: 175.0,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/witchs.jpg"),
                           fit: BoxFit.cover,
                         ),
                         borderRadius: BorderRadius.circular(15.0),

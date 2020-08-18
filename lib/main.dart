@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:innovationclubdemo/home_page.dart';
 import 'sidebar.dart';
 
 void main() {
@@ -28,11 +29,12 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[100],
       drawer: SideBar(),
       appBar: AppBar(
         title: Text("Innovation Club"),
       ),
-      body: Text("example"),
+      body: HomePage(),
     );
   }
 }
