@@ -77,7 +77,7 @@ class SideBar extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.verified_user),
-            title: Text('Our passesd out students'),
+            title: Text('Our Alumni'),
             onTap: () => {
               Navigator.push(
                 context,
